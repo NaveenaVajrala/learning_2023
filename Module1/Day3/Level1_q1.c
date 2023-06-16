@@ -1,33 +1,46 @@
 #include <stdio.h>
 
-void printPattern(int n) {
-    for (int i = n; i >= 1; i--) {
-        // Print numbers from 1 to i
-        for (int j = 1; j <= i; j++) {
-            printf("%d", j);
-        }
+void printDecreasing(int n);
+void printSpaces(int n);
+void printIncreasing(int n);
 
-        // Print spaces
-        int numSpaces = 2 * (n - i);
-        for (int k = 1; k <= numSpaces; k++) {
-            printf(" ");
-        }
-
-        // Print numbers from i to 1
-        for (int j = i; j >= 1; j--) {
-            printf("%d", j);
-        }
-
+int main()
+{
+    int n;
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+    
+    for (int i = n; i >= 1; i--)
+    {
+        printIncreasing(i);
+        printSpaces((n - i) * 2);
+        printDecreasing(i);
         printf("\n");
+    }
+    
+    return 0;
+}
+
+void printDecreasing(int n)
+{
+    for (int i = n; i >= 1; i--)
+    {
+        printf("%d", i);
     }
 }
 
-int main() {
-    int n;
-    printf("Enter the number of rows: ");
-    scanf("%d", &n);
+void printSpaces(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        printf(" ");
+    }
+}
 
-    printPattern(n);
-
-    return 0;
+void printIncreasing(int n)
+{
+    for (int i = 1; i <= n; i++)
+    {
+        printf("%d", i);
+    }
 }
