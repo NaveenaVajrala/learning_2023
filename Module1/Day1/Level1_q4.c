@@ -12,7 +12,7 @@ int simple_calc(int oprnd1,int oprnd2,char opr){
             break;
         case '/':
             if(oprnd2!=0){
-                return oprnd1+oprnd2;
+                return oprnd1/oprnd2;
             }
             else{
                 printf("Zero dividon error\n");
