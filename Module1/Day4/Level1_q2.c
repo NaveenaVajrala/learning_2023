@@ -14,6 +14,6 @@ int main(){
     }
     qsort(arr, num, sizeof(int), cmpfunc);
     printf("Minimum value of array is %d\n",arr[0]);
-    printf("Minimum value of array is %d\n",arr[num-1]);
+    printf("Maximum value of array is %d\n",arr[num-1]);
     return 0;
 }
